@@ -1,0 +1,11 @@
+
+spring-elsk/data/elasticsearch/nodes/0/_state/global-1.st
+*.st
+*.cfe
+*.cfs
+*.si
+spring-elsk/data/elasticsearch/nodes/0/indices/user/0/index/segments_2
+spring-elsk/data/elasticsearch/nodes/0/indices/user/0/index/write.lock
+*.ckp
+*.tlog
+spring-elsk/data/elasticsearch/nodes/0/node.lock
