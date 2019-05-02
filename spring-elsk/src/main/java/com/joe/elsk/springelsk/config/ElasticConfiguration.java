@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.joe.elsk.springelsk.repositories")
+@EnableJpaRepositories(basePackages = "com.joe.elsk.springelsk.repositories.jpa")
+@EnableElasticsearchRepositories(basePackages = "com.joe.elsk.springelsk.repositories.elastic")
 public class ElasticConfiguration {
 
     @Bean

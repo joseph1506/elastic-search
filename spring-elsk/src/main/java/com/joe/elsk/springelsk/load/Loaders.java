@@ -1,7 +1,8 @@
 package com.joe.elsk.springelsk.load;
 
 import com.joe.elsk.springelsk.model.User;
-import com.joe.elsk.springelsk.repositories.UsersRepository;
+import com.joe.elsk.springelsk.repositories.elastic.UsersRepository;
+import com.joe.elsk.springelsk.repositories.jpa.UsersJpaRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.stereotype.Component;
@@ -22,11 +23,19 @@ public class Loaders {
     @Autowired
     UsersRepository usersRepository;
 
+    @Autowired
+    UsersJpaRepo usersJpaRepo;
+
     @PostConstruct
     @Transactional
     public void loadAll(){
         elasticsearchOperations.putMapping(User.class);
-        usersRepository.save(getUsersData());
+        List<User> users = getUsersData();
+        usersJpaRepo.save(users);
+
+        List<User> usersFromDB = usersJpaRepo.findAll();
+        usersRepository.save(usersFromDB);
+
         System.out.println("Loading completed");
     }
 

@@ -1,11 +1,17 @@
 package com.joe.elsk.springelsk.model;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 @Document(indexName = "user", type = "user", shards = 1)
 public class User {
     private String name;
+    @Id
+    @GeneratedValue
     private Long id;
     private String teamName;
     private Long salary;

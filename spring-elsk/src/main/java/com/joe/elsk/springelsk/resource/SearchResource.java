@@ -1,7 +1,7 @@
 package com.joe.elsk.springelsk.resource;
 
 import com.joe.elsk.springelsk.model.User;
-import com.joe.elsk.springelsk.repositories.UsersRepository;
+import com.joe.elsk.springelsk.repositories.elastic.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

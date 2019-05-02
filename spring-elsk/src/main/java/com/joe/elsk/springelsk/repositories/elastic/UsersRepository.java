@@ -1,4 +1,4 @@
-package com.joe.elsk.springelsk.repositories;
+package com.joe.elsk.springelsk.repositories.elastic;
 
 import com.joe.elsk.springelsk.model.User;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

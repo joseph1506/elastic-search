@@ -10,3 +10,4 @@ spring-elsk/data/elasticsearch/nodes/0/indices/user/0/index/write.lock
 *.tlog
 spring-elsk/data/elasticsearch/nodes/0/node.lock
 spring-elsk/data/elasticsearch/nodes/0/indices/user/0/index/segments_a
+spring-elsk/data/elasticsearch/nodes/0/indices/user/0/index/segments_c
